@@ -9,9 +9,7 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 app.use(cors());
 app.use(express.json());
 
-// const connectionString = process.env.MONGO_URI;
-const connectionString =
-  'mongodb+srv://johnnyculbreth:Sonnybear123@portfoliopulsecluster.rbdsyxr.mongodb.net/portfolioPulse';
+const connectionString = process.env.MONGO_URI;
 
 // Create a new MongoClient
 const client = new MongoClient(connectionString, {
