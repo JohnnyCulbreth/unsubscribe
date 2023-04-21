@@ -17,7 +17,7 @@ const UnsubscribeForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/unsubscribe', {
+    const response = await fetch('/unsubscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

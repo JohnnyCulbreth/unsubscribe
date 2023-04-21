@@ -2,13 +2,13 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 require('dotenv').config();
-console.log('MONGO_URI:', process.env.MONGO_URI); // Add this line
+console.log('MONGO_URI:', process.env.MONGO_URI);
 
 app.use(cors());
 app.use(express.json());
 
-// Replace your connection string here
 // const connectionString = process.env.MONGO_URI;
 const connectionString =
   'mongodb+srv://johnnyculbreth:Sonnybear123@portfoliopulsecluster.rbdsyxr.mongodb.net/portfolioPulse';
@@ -28,6 +28,14 @@ const startServer = async () => {
     await client.connect();
     console.log('Connected successfully to MongoDB');
     const db = client.db(dbName);
+
+    if (process.env.NODE_ENV === 'production') {
+      app.use(express.static(path.join(__dirname, '../build')));
+
+      app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../build', 'index.html'));
+      });
+    }
 
     // Define the unsubscribe endpoint
     app.post('/unsubscribe', async (req, res) => {
