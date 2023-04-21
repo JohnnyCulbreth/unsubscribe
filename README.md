@@ -1,4 +1,5 @@
 <img width="1438" alt="Screen Shot 2023-04-21 at 3 35 17 PM" src="https://user-images.githubusercontent.com/102640510/233733200-41fe202b-d163-4c70-a6fc-22864f3947c7.png">
+
 # Unsubscribe Form
 
 This web application is a simple and efficient unsubscribe form for email recipients who wish to be removed from a mailing list. Built using React, Material-UI, and Express, the app allows users to enter their email address and submit it for removal. Upon successful submission, users are given the option to mark the email as spam as well.
