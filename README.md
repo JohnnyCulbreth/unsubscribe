@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<img width="1438" alt="Screen Shot 2023-04-21 at 3 35 17 PM" src="https://user-images.githubusercontent.com/102640510/233733200-41fe202b-d163-4c70-a6fc-22864f3947c7.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Unsubscribe Form
 
-## Available Scripts
+This web application is a simple and efficient unsubscribe form for email recipients who wish to be removed from a mailing list. Built using React, Material-UI, and Express, the app allows users to enter their email address and submit it for removal. Upon successful submission, users are given the option to mark the email as spam as well.
 
-In the project directory, you can run:
+## Features
+- Responsive design that adapts to various screen sizes
+- Clean and user-friendly interface with clear instructions
+- Error handling and user feedback for form submission
+- Express backend with MongoDB for storing email addresses
+- Easy deployment to Heroku
 
-### `npm start`
+## Technologies Used
+- React (with hooks) for the front-end
+- Material-UI for a professional UI design
+- Express for creating the server-side API
+- MongoDB for storing the submitted email addresses
+- Heroku for hosting and deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Run Locally
+1. Clone the repository to your local machine
+2. Run `npm install` in the project directory to install dependencies
+3. Set up a `.env` file in the root folder with the MongoDB connection string as `MONGO_URI`
+4. Run `npm start` to start the Express server
+5. In another terminal, navigate to the `src` folder and run `npm start` to start the React app
+6. Open `http://localhost:3000` in your browser to access the app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment to Heroku
+This application is ready for deployment to Heroku. Make sure you have the Heroku CLI installed and configured.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Create a new Heroku app by running `heroku create your-app-name`
+2. Set the `MONGO_URI` config variable with your MongoDB connection string using `heroku config:set MONGO_URI=your_mongo_uri`
+3. Push your changes to Heroku with `git push heroku master`
+4. Your app should now be live on `https://your-app-name.herokuapp.com/`
